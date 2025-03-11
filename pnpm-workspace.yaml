@@ -1,0 +1,9 @@
+packages:
+  - examples/*
+  - packages/*
+  - storybook
+  - docs/*
+onlyBuiltDependencies:
+  - esbuild
+  - msw
+  - nx

@@ -1,0 +1,33 @@
+{
+    "name": "@pixelizio/core",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/index.umd.cjs",
+    "module": "./dist/index.es.js",
+    "exports": {
+        ".": {
+            "import": "./dist/index.es.js",
+            "require": "./dist/index.umd.cjs"
+        }
+    },
+    "types": "./dist/index.d.ts",
+    "sideEffects": false,
+    "scripts": {
+        "build": "tsc -b && vite build",
+        "format": "prettier --write .",
+        "clean": "rimraf dist",
+        "lint": "eslint ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@10.6.2",
+    "dependencies": {
+        "clsx": "^2.1.1",
+        "tailwind-merge": "^3.0.2"
+    }
+}
