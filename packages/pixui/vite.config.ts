@@ -1,16 +1,18 @@
-import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
-import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
-import dts from "vite-plugin-dts";
+import { dirname, resolve } from 'node:path';
+import tailwindcss from '@tailwindcss/vite';
+import { fileURLToPath } from 'node:url';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
+import dts from 'vite-plugin-dts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
     plugins: [
         react(),
+        tailwindcss(),
         dts({
-            tsconfigPath: resolve(__dirname, "tsconfig.json"),
+            tsconfigPath: resolve(__dirname, 'tsconfig.json'),
         }),
     ],
     server: {
@@ -18,17 +20,17 @@ export default defineConfig({
     },
     build: {
         lib: {
-            entry: resolve(__dirname, "src/index.ts"),
+            entry: resolve(__dirname, 'src/index.ts'),
             fileName: (format) => `index.${format}.js`,
-            name: "@pixelizio/pixui",
+            name: '@pixelizio/pixui',
         },
         rollupOptions: {
-            external: ["react", "react-dom", "react/jsx-runtime"],
+            external: ['react', 'react-dom', 'react/jsx-runtime'],
             output: {
                 globals: {
-                    react: "React",
-                    "react-dom": "ReactDOM",
-                    "react/jsx-runtime": "react/jsx-runtime",
+                    react: 'React',
+                    'react-dom': 'ReactDOM',
+                    'react/jsx-runtime': 'react/jsx-runtime',
                 },
             },
         },

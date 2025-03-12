@@ -52,6 +52,7 @@ export default [
             },
         },
         rules: {
+            'import/no-unresolved': 'off',
             'react/react-in-jsx-scope': 'off',
             'react/prop-types': 'off',
             'prettier/prettier': [
