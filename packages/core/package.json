@@ -17,9 +17,11 @@
     "types": "./dist/index.d.ts",
     "sideEffects": false,
     "scripts": {
+        "coverage": "vitest run --coverage",
         "build": "tsc -b && vite build",
         "format": "prettier --write .",
         "clean": "rimraf dist",
+        "test": "vitest --ui",
         "lint": "eslint ."
     },
     "keywords": [],
@@ -28,6 +30,7 @@
     "packageManager": "pnpm@10.6.2",
     "dependencies": {
         "clsx": "^2.1.1",
+        "cva": "npm:class-variance-authority@^0.7.1",
         "tailwind-merge": "^3.0.2"
     }
 }
