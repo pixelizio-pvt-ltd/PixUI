@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "lint": "eslint .",
-        "clean": "rimraf dist",
+        "clean": "rimraf dist && rimraf storybook-static",
         "preview": "vite preview",
         "dev": "storybook dev -p 3000",
         "build": "storybook build"
