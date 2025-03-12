@@ -17,10 +17,10 @@
     "types": "./dist/index.d.ts",
     "sideEffects": false,
     "scripts": {
+        "clean": "rimraf dist && rimraf coverage",
         "coverage": "vitest run --coverage",
         "build": "tsc -b && vite build",
         "format": "prettier --write .",
-        "clean": "rimraf dist",
         "test": "vitest --ui",
         "lint": "eslint ."
     },
