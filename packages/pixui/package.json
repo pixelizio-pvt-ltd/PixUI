@@ -30,6 +30,7 @@
     "license": "ISC",
     "packageManager": "pnpm@10.6.2",
     "dependencies": {
-        "@pixelizio/core": "workspace:^"
+        "@pixelizio/core": "workspace:^",
+        "@radix-ui/react-slot": "^1.1.2"
     }
 }
