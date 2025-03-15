@@ -11,10 +11,12 @@
     "exports": {
         ".": {
             "import": "./dist/index.es.js",
-            "require": "./dist/index.umd.cjs"
+            "require": "./dist/index.umd.cjs",
+            "types": "./dist/index.d.ts"
         }
     },
     "types": "./dist/index.d.ts",
+    "source": "./dist/index.es.js",
     "sideEffects": false,
     "scripts": {
         "clean": "rimraf dist && rimraf coverage",
